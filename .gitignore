@@ -205,3 +205,12 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+*.jpeg
+*.jpg
+*.png
+*.mp4
+frames/
+videos/
+transcripts/
+.DS_Store
