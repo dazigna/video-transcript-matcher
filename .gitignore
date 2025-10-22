@@ -214,3 +214,5 @@ frames/
 videos/
 transcripts/
 .DS_Store
+*.mp3
+*.json
