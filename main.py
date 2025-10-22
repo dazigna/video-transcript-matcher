@@ -117,7 +117,7 @@ def extract_video_frames(
         success, image = video_capture.read()
         while success:
             if count % frame_interval == 0:
-                frame_time_in_millisec: float = count / frame_rate * 1000
+                frame_time_in_millisec: int = int(count / frame_rate * 1000)
                 file_output_name: str = f"frame_{frame_time_in_millisec}.jpg"
                 frame_path: Path = output_path / file_output_name
 
@@ -230,9 +230,9 @@ def main(api_key: str):
 
     video_ids = [
         "1rbZ5j06sz21n8CzfFITqAbnRLPQOXKrH",
-        # "1ifluItlqtYmL1d619M26PTKp6aOoKzkO",
-        # "13VGCH9xA6YmaMCLyhp3Yxqq7xELcyZMF",
-        # "1mSIV1Y0vhXnntT53NLBFyTkJlwoygdnG",
+        "1ifluItlqtYmL1d619M26PTKp6aOoKzkO",
+        "13VGCH9xA6YmaMCLyhp3Yxqq7xELcyZMF",
+        "1mSIV1Y0vhXnntT53NLBFyTkJlwoygdnG",
     ]
 
     download_dir: Path = Path.cwd() / download_sub_dir
